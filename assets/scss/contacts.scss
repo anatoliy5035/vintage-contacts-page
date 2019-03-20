@@ -1,0 +1,206 @@
+/* contacts  info block */
+.c-contacts-info {
+  padding: 57px 0 93px 0;
+  @media (max-width: 767px) {
+    padding: 30px 0 45px 0;
+  }
+}
+
+.c-contacts-r-col {
+  padding-left: 55px;
+  @media (max-width: 767px) {
+    padding-left: 0;
+    padding-top: 40px;
+  }
+}
+
+.c-contacts-info-box-title {
+  margin-bottom: 32px;
+  font-size: $h2-fontsize;
+  font-weight: 200;
+  line-height: 1.4;
+
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+    font-size: $h2-fontsize / 1.4;
+  }
+
+  span {
+    color: $primary-base-color;
+  }
+}
+
+.c-contacts-cols-wrap {
+  display: flex;
+  @media (max-width: 767px) {
+    flex-flow: wrap
+  }
+}
+
+.c-contacts-col {
+  &+.c-contacts-col {
+    padding-left: 42px;
+    @media (max-width: 767px) {
+      padding-left: 0;
+      padding-top: 20px;
+    }
+  }
+
+  span {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  a {
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  li {
+    font-size: 15px;
+    line-height: normal;
+    font-weight: 300;
+    & + li {
+      margin-top: 8px;
+    }
+  }
+}
+
+.c-lg-tel {
+  display: inline-block;
+  font-size: $h3-fontsize;
+  font-weight: 200;
+  margin-top: 20px;
+  @media (max-width: 991px) {
+    font-size: $h3-fontsize / 1.3;
+  }
+}
+
+.c-contacts-info-text {
+  font-size: $font-size-md;
+  font-weight: 200;
+  line-height: 1.8;
+}
+
+/* map block */
+.c-map {
+  min-height: 500px;
+  position: relative;
+  background-color: lighten($bg-color, .9);
+  .container {
+    position: static;
+  }
+}
+
+.c-map-box {
+   @media (min-width: 768px) {
+     padding-right: 50%;
+   }
+}
+
+.c-map-l {
+  color: white;
+  @media (min-width: 768px) {
+    padding: 90px 60px 100px 0;
+  }
+  @media (max-width: 767px) {
+    padding: 40px 0;
+  }
+}
+
+.c-map-r {
+   @media (min-width: 768px) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 50%;
+   }
+  @media (max-width: 767px) {
+    height: 300px;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .vue-map-container {
+    height: 100%;
+  }
+}
+
+.c-cities-list {
+  margin: 0 -12px 41px -12px;
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+  a {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: $font-size-sm - 1;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 12px;
+
+    &.active, &:hover {
+      color: $primary-base-color
+    }
+  }
+}
+
+.c-company-name {
+  font-size: $h3-fontsize - 2;
+  letter-spacing: 2px;
+  line-height: 1.3;
+  font-weight: 200;
+  margin-bottom: 30px;
+  @media (max-width: 767px) {
+    margin-bottom: 15px;
+  }
+}
+
+.c-company-address {
+  .c-address-line {
+    font-size: $font-size-sm;
+    display: block;
+    font-weight: 200;
+    margin-top: 8px;
+  }
+}
+
+/* contacts us */
+.c-contact-us {
+  padding: 92px 0;
+  background: radial-gradient(#ffffff5e 0, transparent 6%), $primary-base-color;
+  background-position: 20px -2px;
+  background-size: 78px 67px;
+
+  @media (max-width: 767px) {
+    padding: 40px 0;
+  }
+
+  .c-section-title {
+    margin-bottom: 22px;
+  }
+}
+
+.c-contacts-form {
+  max-width: 94%;
+  .c-control-input {
+    &+.c-control-input {
+      margin-top: 5px;
+    }
+  }
+}
+
+.c-contacts-form-footer {
+  margin-top: 40px;
+}
+
+.c-contact-us-text {
+  padding: 78px 0 0 40px;
+  font-size: $font-size-lg;
+  line-height: 1.8;
+  font-weight: 300;
+  @media (max-width: 767px) {
+    padding: 20px 0 0 0;
+  }
+}

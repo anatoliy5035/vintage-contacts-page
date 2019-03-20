@@ -1,0 +1,227 @@
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('../fonts/SuisseIntl-Light.woff2') format('woff2'),
+    url('../fonts/SuisseIntl-Light.woff') format('woff');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('../fonts/SuisseIntl.woff2') format('woff2'),
+    url('../fonts/SuisseIntl.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('../fonts/SuisseIntl-SemiBold.woff2') format('woff2'),
+    url('../fonts/SuisseIntl-SemiBold.woff') format('woff');
+  font-weight: 700;
+}
+
+body {
+  font-family: 'SuisseIntl', sans-serif;
+  color: $text-color;
+}
+
+a {
+  color: $primary-base-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+/* disable chrome autocomplete */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  border: 0;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 174, 255, 0.04) 50%, rgba(255, 255, 255, 0) 51%, rgba(0, 174, 255, 0.03) 100%);
+}
+
+.c-page-layout {
+  overflow-x: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  @media (min-width: 992px) {
+    max-width: $container-width-sm;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: $container-width-lg;
+  }
+}
+
+.row {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.col {
+  box-sizing: border-box;
+  flex: 1 1 50%;
+  min-width: 50%;
+  @media (max-width: 767px) {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+}
+
+.btn {
+  height: 83px;
+  line-height: 83px;
+  background-color: #262626;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width: 279px;
+  cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .7;
+  }
+  @media (max-width: 767px) {
+    height: 63px;
+    line-height: 63px;
+  }
+}
+
+/* alert */
+.c-alert {
+  position: fixed;
+  z-index: 100;
+  top: 20px;
+  right: 20px;
+  left: 20px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.c-alert-error {
+  background-color: #f3cccc;
+  color: #a54f4f;
+}
+
+.c-alert-success {
+  background-color: #e0ffd6;
+  color: #347349;
+}
+
+/* form elements */
+.c-control-input {
+  position: relative;
+  .c-control-label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.c-control-checkbox {
+  margin-top: 14px;
+  position: relative;
+  padding-left: 33px;
+  input {
+    height: 15px;
+    width: 15px;
+    margin: 0;
+    position: absolute;
+    top: 4px;
+    left: 0;
+  }
+  .c-control-label {
+    color: white;
+    font-size: $font-size-lg;
+    font-weight: 200;
+    cursor: pointer;
+  }
+}
+
+.c-control-line {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  &::before {
+    content: '';
+    background-color: white;
+    height: 1px;
+    z-index: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    transition: width .3s;
+  }
+}
+
+.c-input {
+  background-color: transparent !important;
+  font-size: $font-size-lg;
+  width: 100%;
+  height: 54px;
+  outline: none !important;
+  border: none;
+  box-sizing: border-box;
+  display: inline-block;
+  padding-left: 95px;
+
+  &.invalid + .c-control-label {
+    & + .c-control-line {
+      background-color: #e26464;
+    }
+  }
+
+  &:focus {
+    color: white;
+    & + .c-control-label {
+      color: white;
+
+      & + .c-control-line {
+        background-color: transparent;
+        &::before {
+          right: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+/* text */
+.c-section-title {
+  margin-bottom: 30px;
+  color: white;
+  font-size: $h2-fontsize;
+  font-weight: 200;
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+    font-size: $h2-fontsize / 1.4;
+  }
+}
+
+.c-page-title {
+  font-size: $h1-fontsize;
+  line-height: 1.1;
+  font-weight: 200;
+  margin-bottom: 33px;
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+    font-size: $h1-fontsize / 1.4;
+  }
+}
