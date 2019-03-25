@@ -4,7 +4,7 @@ import GmapCluster from 'vue2-google-maps/dist/components/cluster'
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyCrFpScqO9_Oi8IrRUgJJTqS6ABH5UUWXI'
+    key: 'AIzaSyCOzPCEfNQP9wCt0p9UHRcU5PObcxNYtlU'
   }
 })
 Vue.component('InfoWindow', VueGoogleMaps.InfoWindow)
